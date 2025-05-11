@@ -16,7 +16,7 @@ def head_to_head_data(team1,team2):
         chrome_options.add_argument("--headless")
         chrome_options.add_argument("--disable-blink-features=AutomationControlled")  # Avoid bot detection
         chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36")
-        chrome_driver_path = "./chromedriver.exe"
+        chrome_driver_path = "./chromedriver"
         options = webdriver.ChromeOptions()
         driver = webdriver.Chrome(service=Service(chrome_driver_path), options=chrome_options)
 
