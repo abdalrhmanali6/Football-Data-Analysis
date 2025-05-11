@@ -9,15 +9,19 @@ import time
 from selenium.webdriver.chrome.options import Options
 from datetime import datetime
 
+
 #####################################################################head to head teams matches##################################################################
 def head_to_head_data(team1,team2):
+    
     try:
         chrome_options = Options()
+        chrome_options.add_argument("--no-sandbox")
+        chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--headless")
-        chrome_options.add_argument("--disable-blink-features=AutomationControlled")  # Avoid bot detection
+        chrome_options.add_argument("--disable-blink-features=AutomationControlled")
         chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36")
+        chrome_options.binary_location = "/usr/bin/chromium"
         chrome_driver_path = "./chromedriver"
-        options = webdriver.ChromeOptions()
         driver = webdriver.Chrome(service=Service(chrome_driver_path), options=chrome_options)
 
 
@@ -66,8 +70,7 @@ def head_to_head_data(team1,team2):
 
     except Exception as e:
         print(f"Error: {e}")
-    except Exception as e:
-        print("An unexpected error occurred. Please check team names")
+  
     
 
 
@@ -85,14 +88,14 @@ def head_to_head_data(team1,team2):
 
 def League_Standing(Date):  
     try:
-        # Configure Chrome options
         chrome_options = Options()
-        chrome_options.add_argument("--headless")  # Run in background (optional)
-        chrome_options.add_argument("--disable-blink-features=AutomationControlled")  # Avoid bot detection
+        chrome_options.add_argument("--no-sandbox")
+        chrome_options.add_argument("--disable-dev-shm-usage")
+        chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--disable-blink-features=AutomationControlled")
         chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36")
-
-        # Initialize WebDriver (update path to your chromedriver)
-        chrome_driver_path = "./chromedriver.exe"
+        chrome_options.binary_location = "/usr/bin/chromium"
+        chrome_driver_path = "./chromedriver"
         driver = webdriver.Chrome(service=Service(chrome_driver_path), options=chrome_options)
 
         # Fetch the page

@@ -227,7 +227,7 @@ st.markdown("""
     .stMetric {
         background-color: #f0f2f6;
         padding: 20px;
-        border-radius: 10px;
+        border-radius: 10px;ss
     }
 </style>
 """, unsafe_allow_html=True) 
