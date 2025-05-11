@@ -11,7 +11,7 @@ from pprint import pprint
 try:
     # Connect to MongoDB with timeout and server selection timeout
     print("Attempting to connect to MongoDB...")
-    client = MongoClient('mongodb://localhost:27017/', 
+    client =client = MongoClient('mongodb+srv://abdalrahmanali632006:1.a2.s3.d@database.6zhfkgn.mongodb.net/?retryWrites=true&w=majority&appName=Database', 
                         serverSelectionTimeoutMS=5000,  # 5 second timeout
                         connectTimeoutMS=5000)
     
