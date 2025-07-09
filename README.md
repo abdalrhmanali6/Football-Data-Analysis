@@ -1,2 +1,3 @@
 # Football-Data-Analysis
-this project maded in 5/12/2025 mabye site i scrap from updated
+This project was created on 5/12/2025. The site I scraped from might have been updated since then.
+open the word file
